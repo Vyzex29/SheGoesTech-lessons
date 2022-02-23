@@ -7,11 +7,13 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Zane");
             Console.WriteLine("Monta");
             Console.WriteLine("Ieva (two trees)");
             Console.WriteLine("Olga");
             Console.WriteLine("Audrone");
             Console.WriteLine("From Github - Valerijs");
+          
 
         }
     }
