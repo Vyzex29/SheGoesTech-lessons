@@ -17,6 +17,7 @@ namespace HelloWorld
             Console.WriteLine("From Github - Valerijs");
             Console.WriteLine("Violeta");
             Console.WriteLine("Linda");
+            Console.WriteLine("LindaS");
             
 
         }
