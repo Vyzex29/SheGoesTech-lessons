@@ -8,6 +8,7 @@ namespace HelloWorld
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Daiga");
+            Console.WriteLine("Greta");
             Console.WriteLine("Zane");
             Console.WriteLine("Monta");
             Console.WriteLine("Ieva (two trees)");
