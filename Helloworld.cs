@@ -13,8 +13,8 @@ namespace HelloWorld
             Console.WriteLine("Monta");
             Console.WriteLine("Ieva (two trees)");
             Console.WriteLine("Olga");
-            Console.WriteLine("Audrone");
             Console.WriteLine("From Github - Valerijs");
+            Console.WriteLine("LindaS");
             Console.WriteLine("Renate");
             Console.WriteLine("Violeta");
             Console.WriteLine("Linda");
