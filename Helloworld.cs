@@ -10,6 +10,7 @@ namespace HelloWorld
             Console.WriteLine("Ieva (two trees)");
             Console.WriteLine("Olga");
             Console.WriteLine("From Github - Valerijs");
+            Console.WriteLine("Renate");
 
         }
     }
