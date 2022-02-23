@@ -8,6 +8,8 @@ namespace HelloWorld
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Olga");
+            Console.WriteLine("From Github - Valerijs");
+
         }
     }
 }
