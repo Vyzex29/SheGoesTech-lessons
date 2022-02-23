@@ -7,7 +7,7 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("Olga");
+            Console.WriteLine("Daiga");
             Console.WriteLine("From Github - Valerijs");
 
         }
