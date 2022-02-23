@@ -9,6 +9,7 @@ namespace HelloWorld
             Console.WriteLine("Hello World!");
             Console.WriteLine("Ieva (two trees)");
             Console.WriteLine("Olga");
+            Console.WriteLine("Audrone");
             Console.WriteLine("From Github - Valerijs");
 
         }
