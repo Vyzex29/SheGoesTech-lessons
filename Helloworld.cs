@@ -13,6 +13,7 @@ namespace HelloWorld
             Console.WriteLine("Monta");
             Console.WriteLine("Ieva (two trees)");
             Console.WriteLine("Olga");
+            Console.WriteLine("OK :)");
             Console.WriteLine("From Github - Valerijs");
             Console.WriteLine("LindaS");
             Console.WriteLine("Renate");
@@ -20,7 +21,6 @@ namespace HelloWorld
             Console.WriteLine("Linda");
             Console.WriteLine("LindaS");
             Console.WriteLine("Dora");
-
         }
     }
 }
