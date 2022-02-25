@@ -22,6 +22,7 @@ namespace HelloWorld
             Console.WriteLine("LindaS");
             Console.WriteLine("Dora");
             Console.WriteLine("Ieva");
+            Console.WriteLine("Ieva");
         }
     }
 }
