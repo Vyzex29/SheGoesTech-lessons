@@ -1,0 +1,21 @@
+﻿2.LindaG. 2a + 3b - x^2 | a=7, b=2, x = 1.55 
+3.Violeta. 7a + 12.5b + x +5y | a=5, b=1, x=7.01, y=3 
+4.Lorianda. 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15 
+5.Greta. 9a + sqrt(2b) -c | a=7, b=26, c=16 
+6.Maija. 2a + 3b - x^2 | a=7, b=2, x = 1.55 
+7.Dora. 7a + 12.5b + x +5y | a=5, b=1, x=7.01, y=3 
+8.Meri. 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15 
+9.Julija. 9a + sqrt(2b) -c | a=7, b=26, c=16 
+10.Daiga. 2a + 3b - x^2 | a=7, b=2, x = 1.55 
+11.IevaP. 7a + 12.5b + x +5y | a=5, b=1, x=7.01, y=3 
+12.Ieva(TwoTrees). 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15 
+13.Zane. 9a + sqrt(2b) -c | a=7, b=26, c=16 
+14.Irena. 2a + 3b - x^2 | a=7, b=2, x = 1.55 
+15.LindaS. 7a + 12.5b + x +5y | a=5, b=1, x=7.01, y=3 
+16.Olga. 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15 
+17.Indre. 9a + sqrt(2b) -c | a=7, b=26, c=16 
+18.Monta. 2a + 3b - x^2 | a=7, b=2, x = 1.55 
+19.Audrone. 7a + 12.5b + x +5y | a=5, b=1, x=7.01, y=3 
+20.Renate. 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15 
+21.Extra if wanted. 9a + sqrt(2b) -c | a=7, b=26, c=16 
+22.Extra if wanted. 2a + 3*b - x^2 | a=7, b=2, x = 1.55

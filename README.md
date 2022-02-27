@@ -1,2 +1,4 @@
-# helloworld
-Hellor world program
+# Day 2 - helloworld
+Hello world program
+
+# Day 4 - SGTCalculator
