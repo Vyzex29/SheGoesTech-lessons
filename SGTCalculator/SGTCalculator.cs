@@ -32,6 +32,19 @@
             result = 9 * varA + Math.Sqrt(2 * varB) - varC;
             Console.WriteLine("Variant 21. Valerijs D.");
             Console.WriteLine(result);
+
+            // Variant 15. LindaS
+            // 15.LindaS. 7a + 12.5b + x +5y | a=5, b=1, x=7.01, y=3 
+
+            varA = 5;
+            varB = 1;
+            varX = 7.01;
+            varY = 3;
+
+            result = 7 * varA + 12.5 * varB + varX + 5 * varY;
+            Console.WriteLine("Variant 15. LindaS");
+            Console.WriteLine(result); 
+
         }
     }
 }
