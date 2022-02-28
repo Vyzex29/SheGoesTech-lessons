@@ -22,6 +22,19 @@
 
 
             // Next Variants should goc below this line
+            // Variant 20. Renate V.
+            // 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15
+
+            varA = 6;
+            varB = 4;
+            varC = 2;
+            varX = 1.15;
+
+            result2 = 5 * varA – 3 * varB + Math.Pow(varC, 7) – varX;
+            Console.WriteLine("Variant 20. Renate V." /n);
+            Console.WriteLine(result2);
+
+
         }
     }
 }
