@@ -32,6 +32,17 @@
             result = 9 * varA + Math.Sqrt(2 * varB) - varC;
             Console.WriteLine("Variant 21. Valerijs D.");
             Console.WriteLine(result);
+
+            //22.Extra if wanted. 2a + 3 * b - x ^ 2 | a = 7, b = 2, x = 1.55
+
+            varA = 7;
+            varB = 2;
+            varX = 1.55;
+
+            result = 2 * varA + 3 * varB - Math.Pow(varX, 2);
+            Console.WriteLine("Variant 22. Zane");
+            Console.WriteLine(result);
+            Console.ReadKey();
         }
     }
 }
