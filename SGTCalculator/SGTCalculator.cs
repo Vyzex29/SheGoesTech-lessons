@@ -21,7 +21,45 @@
             Console.WriteLine(result);
 
 
+
             // Next Variants should goc below this line
+
+            // Variant 11. Ieva P.
+            // 7a + 12.5b + x +5y | a=5, b=1, x=7.01, y=3
+
+            varA = 5;
+            varB = 1;
+            varX = 7.01;
+            varY = 3;
+
+            result = 7 * varA + 12.5 * varB + varX + 5 * varY;
+            Console.WriteLine("Variant 11.Ieva P.");
+            Console.Write(result);
+
+          
+            // Variant 4. Lorianda
+            // 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15
+
+            varA = 6;
+            varB = 4;
+            varC = 2;
+            varX = 1.15;
+
+            result = 5 * varA - 3 * varB + Math.Pow(varC, 7) - varX;
+            Console.WriteLine("Variant 4. Lorianda.");
+            Console.WriteLine(result);
+
+            // Variant 5. Greta K.
+            // 9a + sqrt(2b) - c | a = 7, b = 26, c = 16
+
+            varA = 7;
+            varB = 26;
+            varC = 16;
+
+            result = 9 * varA + Math.Sqrt(2 * varB) - varC;
+            Console.WriteLine($"Variant 5. Greta K. \n{result}");
+
+            
             // Variant 21. Valerijs D.
             // 9a + sqrt(2b) -c | a=7, b=26, c=16 
 
@@ -45,6 +83,8 @@
             Console.WriteLine("Variant 15. LindaS");
             Console.WriteLine(result); 
 
+
         }
     }
 }
+
