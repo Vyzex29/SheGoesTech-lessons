@@ -23,6 +23,18 @@
 
 
             // Next Variants should goc below this line
+          
+            // Variant 4. Lorianda
+            // 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15
+
+            varA = 6;
+            varB = 4;
+            varC = 2;
+            varX = 1.15;
+
+            result = 5 * varA - 3 * varB + Math.Pow(varC, 7) - varX;
+            Console.WriteLine("Variant 4. Lorianda.");
+            Console.WriteLine(result);
 
             // Variant 5. Greta K.
             // 9a + sqrt(2b) - c | a = 7, b = 26, c = 16
@@ -51,3 +63,4 @@
         }
     }
 }
+
