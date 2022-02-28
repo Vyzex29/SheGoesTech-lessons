@@ -9,6 +9,7 @@
             double varX, varY, varZ;
             double result;
 
+
             // Variant 1. Valerijs D.
             // a^3 + 5*b + sqrt(x)
             // a = 7, b = 95, x = 179.62
@@ -71,9 +72,16 @@
             Console.WriteLine("Variant 21. Valerijs D.");
             Console.WriteLine(result);
 
+            // Variant 17. Indre
+            // 9a + sqrt(2b) - c | a = 7, b = 26, c = 16
 
-            
+            varA = 7;
+            varB = 26;
+            varC = 16;
 
+            result = 9 * varA + Math.Sqrt(2 * varB) - varC;
+            Console.WriteLine("Variant17. Indre");
+            Console.WriteLine(result);
         }
     }
 }
