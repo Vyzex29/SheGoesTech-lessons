@@ -23,6 +23,19 @@
 
 
             // Next Variants should goc below this line
+
+            // Variant 11. Ieva P.
+            // 7a + 12.5b + x +5y | a=5, b=1, x=7.01, y=3
+
+            varA = 5;
+            varB = 1;
+            varX = 7.01;
+            varY = 3;
+
+            result = 7 * varA + 12.5 * varB + varX + 5 * varY;
+            Console.WriteLine("Variant 11.Ieva P.");
+            Console.Write(result);
+
           
             // Variant 4. Lorianda
             // 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15
@@ -60,6 +73,7 @@
 
 
             
+
         }
     }
 }
