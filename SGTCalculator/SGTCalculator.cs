@@ -20,8 +20,31 @@
             result = Math.Pow(varA, 3) + 5 * varB + Math.Sqrt(varX);
             Console.WriteLine("Variant 1. Valerijs D.");
             Console.WriteLine(result);
+          
+            // Next Variants should goc below this line
 
+            // Variant 4. Lorianda
+            // 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15
+            varA = 6;
+            varB = 4;
+            varC = 2;
+            varX = 1.15;
 
+            result = 5 * varA - 3 * varB + Math.Pow(varC, 7) - varX;
+            Console.WriteLine("Variant 4. Lorianda.");
+            Console.WriteLine(result);
+            
+          
+            // Next Variants should goc below this line
+            
+            // Variant 5. Greta K.
+            // 9a + sqrt(2b) - c | a = 7, b = 26, c = 16
+
+            varA = 7;
+            varB = 26;
+            varC = 16;
+            result = 9 * varA + Math.Sqrt(2 * varB) - varC;
+            Console.WriteLine($"Variant 5. Greta K. \n{result}");
 
             // Next Variants should goc below this line
 
@@ -36,21 +59,27 @@
             result = 7 * varA + 12.5 * varB + varX + 5 * varY;
             Console.WriteLine("Variant 11.Ieva P.");
             Console.Write(result);
-
-          
-            // Variant 4. Lorianda
-            // 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15
-
+         
+            // Next Variants should go below this line
+            
+            // Variant 16. Olga S.
+            // 5a - 3b + c ^ 7 - x
+            // a = 6, b = 4, c = 2, x = 1.15
+        
             varA = 6;
             varB = 4;
             varC = 2;
             varX = 1.15;
 
             result = 5 * varA - 3 * varB + Math.Pow(varC, 7) - varX;
-            Console.WriteLine("Variant 4. Lorianda.");
-            Console.WriteLine(result);
 
-            // Variant 5. Greta K.
+            Console.WriteLine();
+            Console.WriteLine("Variant 16. Olga S.");
+            Console.WriteLine(result);
+                   
+            // Next Variants should go below this line
+            
+            // Variant 17. Indre
             // 9a + sqrt(2b) - c | a = 7, b = 26, c = 16
 
             varA = 7;
@@ -58,8 +87,10 @@
             varC = 16;
 
             result = 9 * varA + Math.Sqrt(2 * varB) - varC;
-            Console.WriteLine($"Variant 5. Greta K. \n{result}");
-
+            Console.WriteLine("Variant17. Indre");
+            Console.WriteLine(result);
+         
+            // Next Variants should go below this line
             
             // Variant 21. Valerijs D.
             // 9a + sqrt(2b) -c | a=7, b=26, c=16 
@@ -71,28 +102,22 @@
             result = 9 * varA + Math.Sqrt(2 * varB) - varC;
             Console.WriteLine("Variant 21. Valerijs D.");
             Console.WriteLine(result);
-          
-            //22.Extra if wanted. 2a + 3 * b - x ^ 2 | a = 7, b = 2, x = 1.55
+                   
+            // Next Variants should go below this line
+            
+            //22.Extra if wanted Zane
+            //2a + 3 * b - x ^ 2 | a = 7, b = 2, x = 1.55
 
             varA = 7;
             varB = 2;
             varX = 1.55;
 
             result = 2 * varA + 3 * varB - Math.Pow(varX, 2);
+
             Console.WriteLine("Variant 22. Zane");
             Console.WriteLine(result);
-            Console.ReadKey();
-          
-            // Variant 17. Indre
-            // 9a + sqrt(2b) - c | a = 7, b = 26, c = 16
+            Console.ReadKey();         
 
-            varA = 7;
-            varB = 26;
-            varC = 16;
-
-            result = 9 * varA + Math.Sqrt(2 * varB) - varC;
-            Console.WriteLine("Variant17. Indre");
-            Console.WriteLine(result);
         }
     }
 }
