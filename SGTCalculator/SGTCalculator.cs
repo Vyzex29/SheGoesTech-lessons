@@ -125,7 +125,6 @@
 
             Console.WriteLine("Variant 22. Zane");
             Console.WriteLine(result);
-            Console.ReadKey(); 
           
           //Variant 14. Irena 
           // 2a + 3b - x ^ 2 | a = 7, b = 2, x = 1.55
@@ -135,6 +134,9 @@
             result = 2 * varA + 3 * varB -Math.Pow(varX, 2);
             Console.WriteLine("Variant 14. Irena");
             Console.WriteLine(result);
+
+
+            Console.ReadKey();
 
         }
     }
