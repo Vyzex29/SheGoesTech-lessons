@@ -1,61 +1,62 @@
-﻿namespace SGTCalculator // Note: actual namespace depends on the project name.
+﻿Console.WriteLine("Enter first number");
+string number1string = Console.ReadLine();
+int number1Parse = int.Parse(number1string);
+
+Console.WriteLine("Enter second number");
+string number2string = Console.ReadLine();
+int number2Parse = int.Parse(number2string);
+
+var result1 = number1Parse + number2Parse;
+var result2 = number1Parse - number2Parse;
+var result3 = number1Parse / number2Parse;
+var result4 = number1Parse * number2Parse;
+var result5 = number1Parse % number2Parse;
+
+
+
+char symbol = '+';
+Console.WriteLine("Enter one of the symbols for calculation: +, -, /, *, %, p, b, s");
+string symbolString = Console.ReadLine();
+bool symbolParsed = char.TryParse(symbolString, out symbol);
+
+switch (symbol)
 {
-    public class SGTCalculator
-    {
-        static void Main(string[] args)
+    case '+':
+        Console.WriteLine($"Sum of both elements: {result1}");
+        break;
+    case '-':
+        Console.WriteLine($"Subtraction: {result2}");
+        break;
+    case '/':
+        Console.WriteLine($"Division: {result3}");
+        break;
+    case '*':
+        Console.WriteLine($"Multiplication: {result4}");
+        break;
+    case '%':
+        Console.WriteLine($"Remainder: {result5}");
+        break;
+    case 'p':
+        Console.WriteLine($"Number1 is {number1Parse}, Number2 is {number2Parse}");
+        break;
+    case 'b':
+        if (number1Parse > number2Parse)
         {
-            // Define variables
-            int varA, varB, varC;
-            double varX, varY, varZ;
-            double result;
-
-            // Variant 1. Valerijs D.
-            // a^3 + 5*b + sqrt(x)
-            // a = 7, b = 95, x = 179.62
-            varA = 7;
-            varB = 95;
-            varX = 179.62;
-
-            result = Math.Pow(varA, 3) + 5 * varB + Math.Sqrt(varX);
-            Console.WriteLine("Variant 1. Valerijs D.");
-            Console.WriteLine(result);
-
-
-            // Next Variants should goc below this line
-            // Variant 20. Renate V.
-            // 5a - 3b + c^7 - x | a=6, b=4, c=2, x=1.15
-
-            varA = 6;
-            varB = 4;
-            varC = 2;
-            varX = 1.15;
-
-            result2 = 5 * varA – 3 * varB + Math.Pow(varC, 7) – varX;
-            Console.WriteLine("Variant 20. Renate V." /n);
-            Console.WriteLine(result2);
-
-
-            // Variant 21. Valerijs D.
-            // 9a + sqrt(2b) -c | a=7, b=26, c=16 
-
-            varA = 7;
-            varB = 26;
-            varC = 16;
-
-            result = 9 * varA + Math.Sqrt(2 * varB) - varC;
-            Console.WriteLine("Variant 21. Valerijs D.");
-            Console.WriteLine(result);
-
-            // Variant 17. Indre
-            // 9a + sqrt(2b) - c | a = 7, b = 26, c = 16
-
-            varA = 7;
-            varB = 26;
-            varC = 16;
-
-            result = 9 * varA + Math.Sqrt(2 * varB) - varC;
-            Console.WriteLine("Variant17. Indre");
-            Console.WriteLine(result);
+            Console.WriteLine("Number1 is bigger than Number2");
         }
-    }
+        else
+        {
+            Console.WriteLine("Number2 is bigger than Number1");
+        }
+        break;
+    case 's':
+        if (number1Parse < number2Parse)
+        {
+            Console.WriteLine("Number1 is smaller than Number2");
+        }
+        else
+        {
+            Console.WriteLine("Number2 is smaller than Number1");
+        }
+        break;
 }
