@@ -4,31 +4,91 @@
     {
         static void Main(string[] args)
         {
+            /*
+            int[] intArray = new int[3];
+
+            intArray[0] = 1;
+            intArray[1] = 2;
+            intArray[2] = 3;
+
+            Console.WriteLine($"The values of the array are:" +
+                $" {intArray[0]}, {intArray[1]}, {intArray[2]} ");
+
+            int[] temperatures = {24,23,22,15,17,18,19};
+            int lastElementValue = temperatures[temperatures.Length - 1];
+            Console.WriteLine($"LastElementOfTheArray is {lastElementValue}");
+            //Console.WriteLine($"Temperature on Sunday is {temperatures[6]}");
+
+            int sumOfElements = 0;
+            double averageTemparature;
+
+            for (int i = 0; i < temperatures.Length; i++)
+            {
+                sumOfElements += temperatures[i];
+            }
+
+            int counter = 1;
+            foreach (int temperature in temperatures)
+            {
+                Console.WriteLine($"Temperatures for this week, Day {counter}: {temperature}");
+                counter++;
+            }
+
+            averageTemparature = (double)sumOfElements / (double)temperatures.Length;
+
+            Console.WriteLine($"The average temperature for the week is {averageTemparature} C");
+
+            */
+            /*
+            for (int i=7; i < 10; i++) 
+            {
+                Console.WriteLine($"It is the {i} iteration");
+            }*/
             
-            // Parsing - assumes the string passed is always filled with the correct corresponding data type values 
-            // Convert - assumes the string passed is always filled with the correct corresponding data type values,
-            //but when passed null, will return 0
-            // TryParse - Wil check whether the entered string is valid, if it;s valid will return the value and return a boolean value
-            // telling that the string entered is convertable. If the string is not valid will assign default value to the number and return a false boolean value
-            Console.WriteLine("Enter first number!");
+            /* infinite loop
+            for (int i = 0; i < 10; i--) 
+            {
+                Console.WriteLine($"It is the {i} iteration");
+            }
+            */
+            /*
+            var amountSpent = 0;
 
-            string number1string = Console.ReadLine();
+            for(int i = 0; i < 100; i++)
+            {
+                if(i % 7 == 0)
+                {
+                    Console.WriteLine("You get a free coffe!");
+                }
+                else
+                {
+                    Console.WriteLine("You pay 3 euro for coffe");
+                    amountSpent += 3;
+                }
+            }
 
-            //double number1Parse = double.Parse(number1string);
-            //double number1Convert = Convert.ToDouble(number1string);
-            bool num1IsParsed = double.TryParse(number1string, out double number1Tryparse);
-            Console.WriteLine("Enter second number!");
+            Console.WriteLine($"We spent on coffe {amountSpent} euros");
+            */
 
-            string number2string = Console.ReadLine();
+            var rand = new Random();
+            var wakeUpAttempts = 0;
+            var wakeUpAttemptsLimit = rand.Next(0,5);
+            float time = 7.5f;
+            Console.WriteLine($"Wake up atempts limit is {wakeUpAttemptsLimit}");
 
-            //double number2Parse = double.Parse(number2string);
-            //double number2Convert = Convert.ToDouble(number2string);
-            bool num2IsParsed = double.TryParse(number2string, out double number2Tryparse);
-            double sum = number1Tryparse / number2Tryparse;
+            while (true)
+            {
+                Console.WriteLine($"Alarm is sounding, it's {time} o' clock, WAKE UP");
+                Console.WriteLine($"Valera pressed the snoozed button, ZZZZ");
+                time += 0.5f;
+                wakeUpAttempts++;
+                if (wakeUpAttempts == wakeUpAttemptsLimit)
+                {
+                    break;
+                }
+            }
 
-            Console.WriteLine($"The sum between {number1Tryparse} and {number2Tryparse} is: {sum}");
-            Console.WriteLine($"Is the first number parsable: {num1IsParsed} \n Is the second number parsable: {num2IsParsed}");
-
+            Console.WriteLine($"Valera has woken up at {time} o'clock");
 
         }
     }
