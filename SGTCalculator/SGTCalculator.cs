@@ -72,6 +72,28 @@ namespace SGTCalculator
             {
                 Console.WriteLine($"{cities[i]} = {cityLength[i]}");
             }
+
+
+            Console.WriteLine("Enter letter");
+            char.TryParse(Console.ReadLine(), out char userInput);
+
+            var regex = new Regex($"^{userInput}");
+
+            for (int i = 0; i < cities.Length; i++)
+            {
+                if (regex.IsMatch(cities[i]))
+                {
+                    Console.WriteLine($"Matches with user input {userInput}: {cities[i]}");
+                }
+            }
+
+            for (int i = 0; i < cities.Length; i++)
+            {
+                if (cities[i][0] == userInput)
+                {
+                    Console.WriteLine($"Matches with user input {userInput}: {cities[i]}");
+                }
+            }
         }
     }
 }
