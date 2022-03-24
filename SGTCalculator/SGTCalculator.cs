@@ -1,71 +1,35 @@
-﻿using System.Text;
+﻿using System.Text.RegularExpressions;
 
 namespace SGTCalculator 
 {
-    public enum Suits
-    {
-        Spades,
-        Clubs,
-        Hearts,
-        Diamonds
-    }
-
-    public enum CardValues
-    {
-        Two,
-        Three,
-        Four,
-        Five,
-        Six,
-        Seven,
-        Eight,
-        Nine,
-        Ten,
-        Jack,
-        Queen,
-        King,
-        Ace
-    }
 
     public class SGTCalculator
     {
-
-        static public void Shuffle(string[] cardPack)
-        {
-            Random rnd = new Random();
-
-            for (int n = cardPack.Length - 1; n > 0; --n)
-            {
-                int k = rnd.Next(n + 1);
-                string temp = cardPack[n];
-                cardPack[n] = cardPack[k];
-                cardPack[k] = temp;
-            }
-        }
-
         static void Main(string[] args)
         {
-            string[] cardPack = new string[52];
+            Console.WriteLine("Enter a string to see if it's a palindrome");
+            string userInput = Console.ReadLine().ToLower();
 
-            int position = 0;
-            foreach (string suit in Enum.GetNames(typeof(Suits)))
+            string userInputFormated = string.Empty;
+            Regex re = new Regex("[a-zA-Z]");
+            for (int i = 0; i < userInput.Length; i++)
             {
-                foreach (string values in Enum.GetNames(typeof(CardValues)))
+                if (re.IsMatch(userInput[i].ToString()))
                 {
-                    cardPack[position] = $"{values} of {suit}";
-                    position++;
+                    userInputFormated += userInput[i];
                 }
             }
-            Console.WriteLine($"The first card is {cardPack[0]}");
 
-            Shuffle(cardPack);
-
-            for (int i = 0; i < 6; i++)
+            string userInputReversed = string.Empty;
+            bool isPalindrome;
+            for (int i = userInputFormated.Length-1; i >= 0; i--)
             {
-                Console.WriteLine($"{cardPack[i]}");
+                userInputReversed += userInputFormated[i];
             }
-            
 
+            isPalindrome = userInputFormated.Equals(userInputReversed);
+            Console.WriteLine(userInputReversed);
+            Console.WriteLine($"You have entered a palindrome: {isPalindrome}");
         }
     }
 }
