@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
 
 namespace SGTCalculator 
 {
@@ -7,29 +7,18 @@ namespace SGTCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a string to see if it's a palindrome");
-            string userInput = Console.ReadLine().ToLower();
+            // ISO8601 yyyy-MM-dd
+            Console.WriteLine("Enter the day of your birthday!");
+            string day = Console.ReadLine();
 
-            string userInputFormated = string.Empty;
-            Regex re = new Regex("[a-zA-Z]");
-            for (int i = 0; i < userInput.Length; i++)
-            {
-                if (re.IsMatch(userInput[i].ToString()))
-                {
-                    userInputFormated += userInput[i];
-                }
-            }
+            Console.WriteLine("Enter the month of your birthday!");
+            string month = Console.ReadLine();
 
-            string userInputReversed = string.Empty;
-            bool isPalindrome;
-            for (int i = userInputFormated.Length-1; i >= 0; i--)
-            {
-                userInputReversed += userInputFormated[i];
-            }
+            Console.WriteLine("Enter the year of your birthday!");
+            string year = Console.ReadLine();
 
-            isPalindrome = userInputFormated.Equals(userInputReversed);
-            Console.WriteLine(userInputReversed);
-            Console.WriteLine($"You have entered a palindrome: {isPalindrome}");
+            string forParsing = $"{year}-{month}-{day}";
+            Console.WriteLine(DateTime.Parse(forParsing).ToString("yyyy-MM-dd"));
         }
     }
 }
