@@ -1,30 +1,18 @@
-﻿namespace SGTCalculator 
-{
+﻿using Animal;
+using SGTCalculator;
 
-    public class SGTCalculator
-    {
-        static void Main(string[] args)
-        {
-            Dog dog1 = new Dog("Bobby",3,10,"12-16", "American Staffordshire Terrier", 25,"Brown", true, 'M');
+Cat cat = new Cat();
+Console.WriteLine($"{cat.Name}, {cat.Age}");
+cat.Name = "Muris";
+cat.Age = -10;
+Console.WriteLine($"{cat.Name}, {cat.Age}");
+cat.Sleep();
+cat.Ate(1);
+Console.WriteLine($"{cat.Name} ate {cat.ShowAmountOfFoodConsumed()} kilos");
 
-            dog1.SetName("Bobby");
-            Dog dog2 = new Dog("Snowflake", 5, 20, "10-12", "Caucasian Shepherd Dog", 120, "Brown",true, 'F');
+var cat1 = new Cat("Poli",10);
+cat1.Sleep();
+cat1.Ate(10);
+Console.WriteLine($"{cat1.Name} ate {cat1.ShowAmountOfFoodConsumed()} kilos");
 
-            dog2.SetName("Snowflake");
-
-            Console.WriteLine($"{dog1.GetName()}, {dog2.GetName()}");
-
-            dog1.Eat();
-
-            dog2.Eat();
-            
-            Dog noArgumentConsturctorDog = new Dog();
-
-            Console.WriteLine($"{noArgumentConsturctorDog.GetName()}");
-            noArgumentConsturctorDog.Eat();
-
-        }
-    }
-}
-
-
+Console.WriteLine(MathExample.SumAandB(5, 3));
