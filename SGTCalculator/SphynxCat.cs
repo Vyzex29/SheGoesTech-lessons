@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Animal
 {
-    internal class Girafe
+    internal class SphynxCat : Cat
     {
+        public bool HasHair = false;
+
     }
 }

@@ -1,45 +1,22 @@
 ﻿namespace Animal
 {
-    internal class Cat
+    internal class Cat : Animal
     {
         public int FoodConsumed { get; set; }
 
-        public string Name { get; set; } // prop , presing tab x2
-
-        private int age;  // Hide away a field from others and secure it and add validation on it
-
-        // propfull, pressign tab x2, naming convention wise fields - camelCase(starting from lowercase)
-        public int Age // properties are PascalCase (Starts with UpperCase)
+        public Cat() : base("Kitty", 1)
         {
-            get { return age; }
-            set { 
-                if(value > 0)
-                {
-                    age = value;
-                }
-                else
-                {
-                    age = 0;
-                }
-            }
+            FoodConsumed = 0;
         }
 
-        public Cat()
+        public Cat(string name, int age, int foodConsumed) : base(name, age)
         {
-            Name = "Kitty";
-            Age = 1;
+            FoodConsumed = foodConsumed;
         }
 
-        public Cat(string name, int age)
+        public override void Ate()
         {
-            Name = name;
-            Age = age;
-        }
-
-
-        public void Sleep()
-        {
-            Console.WriteLine($"{Name} is sleeping. zzzzZZZ");
+            Console.WriteLine($"{Name} Chomps down the prey");
         }
 
         public void Ate(int foodConsumed)
@@ -50,6 +27,17 @@
         public int ShowAmountOfFoodConsumed()
         {
             return FoodConsumed;
+        }
+
+        public void Meow()
+        {
+            Console.WriteLine($"{Name} meows");
+        }
+
+        public override void SayHello()
+        {
+            base.SayHello();
+            Console.WriteLine("Meow");
         }
     }
 }
