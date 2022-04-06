@@ -1,37 +1,38 @@
-﻿using Animal;
-using SGTCalculator;
+﻿using SGTCalculator;
+using System.Text.RegularExpressions;
 
-var cat = new Cat("Poli",10, 0);
-/*cat.Sleep();
-cat.Ate();
-cat.Meow();
-cat.SayHello();
-*/
-Bird bird = new Bird("Pigeon", 1);
-/*
-bird.Sleep();
-bird.Ate();
-bird.Fly();
-bird.SayHello();
-*/
-List<Animal.Animal> zoo = new List<Animal.Animal>();
-zoo.Add(bird);
-zoo.Add(cat);
+Literature book = new Literature();
+book.Title = "Unknown";
 
-foreach (Animal.Animal animal in zoo)
+/*string bookInformation = book.GetLiteratureInfo();
+
+var result = Math.Pow(2, 5);
+
+Regex regex = new Regex("[a-zA-Z]");
+if (regex.IsMatch(bookInformation))
 {
-    animal.Ate();
-    animal.SayHello();
-    animal.Sleep();
+    Console.WriteLine("Book matches our guidelines");
 }
 
-int g = 6;
+Console.WriteLine($"From method GetLiteratureInfo: {bookInformation}");
+book.PrintLiteratureInfo();*/
 
-List<Shape> shapes = new List<Shape>();
-shapes.Add(new Circle { Radius = 5 });
-shapes.Add(new Square { SideLenght = 5 });
+Fiction fiction = new Fiction();
+fiction.Title = "Dragon Slayer";
+fiction.Genre = "Fantasy";
 
-foreach (var shape in shapes)
+NonFiction nonFiction = new NonFiction();
+nonFiction.Title = "OpevCV2 library review";
+nonFiction.PeerReviewed = false;
+
+List<Literature> library = new List<Literature>();
+library.Add(book);
+library.Add(nonFiction);
+library.Add(fiction);
+
+// Library showcase
+foreach (Literature literature in library)
 {
-    shape.CalculateArea();
+    literature.PrintLiteratureInfo();
 }
+book.PrintLiteratureInfo(DateTime.Now);
