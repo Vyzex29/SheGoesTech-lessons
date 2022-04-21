@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace SGTCalculator 
 {
@@ -7,29 +8,49 @@ namespace SGTCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a string to see if it's a palindrome");
-            string userInput = Console.ReadLine().ToLower();
+            Console.WriteLine("Getting Connection ...");
 
-            string userInputFormated = string.Empty;
-            Regex re = new Regex("[a-zA-Z]");
-            for (int i = 0; i < userInput.Length; i++)
+            var datasource = @"WINDOWS-NDJDBML";//your server
+            var database = "BicycleShop"; //your database name
+            var username = "sa"; //username of server to connect
+            var password = "password"; //password
+
+            //your connection string 
+            string connString = @$"Server={datasource};Database={database};Trusted_Connection=True;";
+
+            Console.WriteLine(connString);
+            string query = $" INSERT INTO [sales].[customers] " +
+                $"Values('ValerijsFromConsole2', 'Diks', '27793783', 'email', 'bultu', 'Riga', 'RX', 'LV106')";
+
+            string query2 = $"Select * from [sales].[customers] Where state = 'NY'";
+            //create instanace of database connection
+            SqlConnection conn = new SqlConnection(connString);
+
+            try
             {
-                if (re.IsMatch(userInput[i].ToString()))
+                Console.WriteLine("Openning Connection ...");
+
+                //open connection
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query2, conn);
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    userInputFormated += userInput[i];
+                    while (reader.Read())
+                    {
+                        Console.WriteLine(String.Format($"{reader["first_name"]} {reader["last_name"]}"));
+                    }
+                    Console.WriteLine("Command executed");
+
                 }
+                Console.WriteLine("Connection successful!");
             }
-
-            string userInputReversed = string.Empty;
-            bool isPalindrome;
-            for (int i = userInputFormated.Length-1; i >= 0; i--)
+            catch (Exception e)
             {
-                userInputReversed += userInputFormated[i];
+
+                Console.WriteLine("Error: " + e.Message);
             }
 
-            isPalindrome = userInputFormated.Equals(userInputReversed);
-            Console.WriteLine(userInputReversed);
-            Console.WriteLine($"You have entered a palindrome: {isPalindrome}");
+            Console.Read();
         }
     }
 }
